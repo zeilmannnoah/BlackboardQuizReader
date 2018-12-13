@@ -1,0 +1,33 @@
+extends layout.pug
+block content
+	.row.mt-3
+		.col-6.offset-3
+			.row
+				.col-12
+					label New Quiz? 
+					label.switch.ml-3
+						input(type='checkbox')#switch-quiz
+						span.slider.round
+			#old-quiz-row.row.padding-fix
+				.col-12
+					label Choose Previous Quiz
+					.input-group.mb-3.ml-3
+						select#quiz-name-select.custom-select
+							option(selected) Choose quiz
+							each quiz in quizzes
+								option(value=quiz.id) !{quiz.name}
+			#new-quiz-row.row.d-none.padding-fix
+				.col-12
+					label New Quiz Name
+					.input-group.mb-3.ml-3
+						input(type='text' placeholder='Quiz Name')#quiz-name-input.form-control
+			.row.padding-fix
+				.col-12
+					label Upload your quizes
+					.input-group.ml-3
+						.custom-file
+							input(type='file' accept='.html' multiple)#quiz-input.custom-file-input
+							label(for='quiz-input' name='quiz-files')#quiz-label.custom-file-label Choose quizzes
+			.row.mt-3.padding-fix
+				.col-12
+					button(type='button')#quiz-upload.btn.btn-secondary.btn-lg.btn-block.ml-3 Upload Quiz

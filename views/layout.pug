@@ -1,0 +1,24 @@
+doctype html
+html
+	head
+		title Blackboard Quiz Generator
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
+		link(rel='stylesheet' type='text/css' href='/resources/css/layout.css') 
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+		script(src='/resources/js/layout.js')
+		script(src=`/resources/js/${activePage}.js`)
+	body
+		.container-fluid
+		.row.main-row
+			.col-9
+				h1.title Blackboard Quiz Generators 
+			.col-3
+				nav.nav.nav-pills.nav-justified.side-bar
+					a(href="/" class=activePage === 'index' ? 'active' : '').nav-item.nav-link Home
+					a(href="/upload" class=activePage === 'upload' ? 'active' : '').nav-item.nav-link Upload
+		.row.mt-3
+			.col-6.offset-3
+				#alert-mgr
+		block content
+
+	

@@ -1,0 +1,22 @@
+extends layout.pug
+block content
+	.row.mt-3
+		.col-6.offset-3
+			.row.padding-fix
+				.col-12
+					label(for="") Select your quiz
+					.input-group.mb-3.ml-3
+						.input-group-prepend
+							label(for="quiz-select")#quiz-label.input-group-text Quizzes
+						select#quiz-select.custom-select
+							option(selected) Choose quiz
+								each quiz in quizzes
+									option(value=quiz.id) !{quiz.name}
+			.row#range-row.padding-fix.d-none
+				.col-12
+					label(for="question-range")#count-label Question Amount
+					.input-group.mb-3.ml-3
+						input(type='range')#question-range.custom-range
+			.row.mt-3.padding-fix
+				.col-12
+					button(type='button')#take-quiz-btn.btn.btn-secondary.btn-lg.btn-block.ml-3 Take Quiz

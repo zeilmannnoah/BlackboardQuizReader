@@ -1,0 +1,20 @@
+{
+  "name": "blackboardquizreader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "Noah Zeilmann",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.4",
+    "express-fileupload": "^1.0.0",
+    "multer": "^1.4.1",
+    "pug": "^2.0.3"
+  }
+}
