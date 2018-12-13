@@ -1,4 +1,5 @@
 # BlackboardQuizReader
+This is a simple app to parse downloaded Blackboard quiz HTML files and create a quizzes from those files.
 ## Dependencies
 1. NodeJS
 2. Open port on 8080
